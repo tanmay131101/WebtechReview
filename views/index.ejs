@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VocalForLocal</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,500;0,600;1,300&displa
+y=swap" rel="stylesheet">
+<style>
+    *{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+
+}
+nav{
+  flex: 1;
+  text-align: right;
+}
+nav ul{
+  display:inline-block;
+  list-style-type: none;
+}
+nav ul li{
+  display:inline-block;
+  margin-right: 20px;
+}
+a{
+  text-decoration: none;
+  color:#555555;
+}
+p{
+  color:#555555;
+}
+.container{
+  max-width: 1300px;
+  margin: auto;
+  padding-left:25px ;
+  padding-right:25px ;
+
+}
+.row{
+  display: flex;
+  align-items: center;
+  flex-wrap:wrap ;
+  justify-content:space-around ;
+
+}
+.col-2{
+  flex-basis: 50%;
+  min-width: 300px;
+
+}
+.col-2 img{
+  max-width: 100%;
+  padding: 50px 0;
+
+}
+.col h1{
+  font-size: 50px;
+  line-height:60px ;
+  margin:25px 0;
+
+}
+.btn{
+  display: inline-block;
+  background:#ff523b ;
+  color:#ffffff;
+  padding: 8px 30px;
+  margin: 30px 0;
+  border-radius: 30px;
+  transition: background 0.5s;
+}
+.header{
+  background: radial-gradient(#ffffff,#ffffff);
+}
+.header .row{
+  margin-top: 70px;
+}
+.btn:hover{
+  background: #563434;
+}
+.categories{
+  margin: 70px 0;
+  background: radial-gradient(#ffffff,#ffd6d6);
+}
+.col-3{
+  flex-basis: 30%;
+  min-width: 250px;
+  margin-bottom: 30px;
+
+}
+.col-3 img{
+  width :100%;
+}
+.products{
+  background: radial-gradient(#ffffff,#ffffff);
+}
+.smallcontainer{
+  max-width: 1080px;
+  margin: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+}
+.col-4 {
+  flex-basis: 25%;
+  padding: 10px;
+  min-width:200px ;
+  margin-bottom:50px;
+  transition: transform 0.5s;
+}
+.col-4 img{
+  width: 100%;
+}
+.title{
+  margin:0 auto 80px;
+  position:relative;
+  text-align:center ;
+  line-height: 60px;
+  color:#555555;
+}
+.title::after{
+  content: '';
+  background: #ff523b;
+  width: 80px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+  left:50%;
+  transform: translateX(-50%);
+}
+h4{
+  color: #555;
+  font-weight: bold;
+  font-size: 16px;
+
+}
+.col-4 p{
+  font-size: 14px;
+}
+.col-4:hover{
+  transform: translateY(-10px);
+}
+/*------------offer-------------*/
+.offer{
+  background: radial-gradient(#ffffff,#ffd6d6);
+  margin-top: 80px;
+  padding: 30px 0;
+
+}
+.col-2 .offer-img{
+  padding: 50px;
+}
+small{
+  color: #555;
+}
+/*---------footer---------*/
+.footer{
+  background: #000;
+  color:#8a8a8a;
+  font-size: 14px;
+  padding: 60px 0 20px;
+}
+.footer p{
+  color:#8a8a8a;
+}
+.footer h3{
+  color: #ffffff;
+  margin-bottom:20px;
+
+}
+.footer-col1,.footer-col2,.footer-col3,.footer-col4{
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+.footer-col1{
+  flex-basis: 30%;
+}
+.footer-col2{
+  flex: 1;
+  text-align: center;
+}
+.footer-col2 img{
+  width: 180px;
+  margin-bottom: 20px;
+}
+.footer-col3,.footer-col4{
+  flex-basis: 12%;
+  text-align:center;
+}
+ul{
+  list-style-type: none;
+}
+li{
+  line-height: 30px;
+}
+.app-logo{
+  margin-top: 20px;
+}
+.app-logo img{
+  width: 140px;
+}
+.footer hr{
+  border:none;
+  background: #b5b5b5;
+  height: 1px;
+  margin: 20px 0;
+}
+.copyright{
+  text-align: center;
+}
+.menu-icon{
+  width: 28px;
+  margin-left: 20px;
+  display: none;
+}
+@media only screen and (max-width:800px){
+  nav ul{
+    position: absolute;
+    top: 70px;
+    left:0;
+    background: #333;
+    width: 100%;
+    overflow: hidden;
+    transition:max-height 0.5s ;
+
+  }
+  nav ul li{
+    display: block;
+    margin-right:50px;
+    margin-top: 10px;
+    margin-bottom:10px;
+  }
+  nav ul li a{
+    color: #fff;
+  }
+  .menu-icon{
+    display: block;
+    cursor: pointer;
+  }
+}
+/*----------all products page-------------*/
+.row-2{
+  justify-content: space-between;
+  margin: 100px auto 50px;
+}
+select{
+
+  border: 1px solid #ff523b;
+  padding: 5px;
+}
+select:focus{
+  outline: none;
+
+}
+.page-btn{
+  margin: 0px auto 80px;
+}
+.page-btn span{
+  display: inline-block;
+  border:1px solid #ff523b;
+  margin-left: 10px;
+  width: 40px;
+  height:40px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.page-btn span:hover{
+  background: #ff523b;
+  color:#fff
+}
+.about-sec{
+  margin-top: 80px;
+  margin-bottom: 150px;
+
+  text-align: center;
+  line-height: 50px;
+}
+.contact{
+
+  margin-top: 80px;
+  margin-bottom: 150px;
+  text-align: center;
+  line-height: 30px;
+
+}
+
+
+
+
+
+
+
+
+@media only screen and (max-width:600px){
+  .row{
+    text-align: center;
+  }
+  .col-2,.col-3,.col-4{
+    flex-basis: 100%;
+
+  }
+}
+
+
+
+
+</style> 
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class ="navbar">
+            <div class="logo">
+                <img src="logo3.jpg" href="" width="80px" >
+            </div>
+            <nav>
+                <ul id="Menuitems">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/product">Products</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact us</a></li>
+                    <li><a href="/login">Login</a></li>
+                </ul>
+            </nav>
+            <img src="cart.png" width="30px" height="30px">
+            <img src="menu.png" class="menu-icon" onclick="menutoggle()">
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h1>Support your local vendors,<br>in this difficult period of pandemic</h1>
+                <p>Help them by purchasing their goods online</p>
+                <a href="" class="btn">Explore now &#8594</a>
+            </div>
+            <div class="col-2">
+                <img src="logo1.jpg">
+            </div>
+        </div>
+    </div>
+    3
+</div>
+<!---------------------------Featured categories----------------------------->
+<div class="categories">
+    <div class="smallcontainer">
+        <h2 class="title">Featured Categories</h2>
+        <div class="row">
+            <div class="col-3">
+                <img src="/images/category-1.jpg">
+            </div>
+            <div class="col-3">
+                <img src="/images/category-2.jpg">
+            </div>
+            <div class="col-3">
+                <img src="/images/category-3.jpg">
+            </div>
+        </div>
+    </div>
+</div>
+<!---------------------------Featured products----------------------------->
+<div class="products">
+    <div class="smallcontainer">
+        <h2 class="title">Featured Products</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="product-1.jpg">
+                <h4>product name1</h4>
+                <p>price of product1</p>
+            </div>
+            <div class="col-4">
+                <img src="/images/product-2.jpg">
+                <h4>product name2</h4>
+                <p>price of product2</p>
+            </div>
+            <div class="col-4">
+                <img src="/images/product-3.jpg">
+                <h4>product name3</h4>
+                <p>price of product3</p>
+            </div>
+            <div class="col-4">
+                <img src="/images/product-4.jpg">
+                <h4>product name4</h4>
+                <p>price of product4</p>
+            </div>
+        </div>
+        <h2 class="title">Latest Products</h2> <div class="row"> <div class="col-4"> <img src="/images/product-5.jpg"> <h4>product name5</h4> <p>price of product5</p> </div> <div class="col-4"> <img src="/images/product-6.jpg"> <h4>product name6</h4> <p>price of product6</p> </div> <div class="col-4"> <img src="/images/product-7.jpg"> <h4>product name7</h4> <p>price of product7</p> </div> <div class="col-4"> <img src="/images/product-8.jpg"> <h4>product name8</h4> <p>price of product8</p> </div> </div> <div class="row"> <div class="col-4"> <img src="/images/product-9.jpg"> <h4>product name9</h4> <p>price of product9</p> </div> <div class="col-4"> <img src="/images/product-10.jpg"> <h4>product name10</h4> <p>price of product10</p> </div> <div class="col-4"> <img src="/images/product-11.jpg"> <h4>product name11</h4> <p>price of product11</p> </div> <div class="col-4"> <img src="/images/product-12.jpg"> <h4>product name12</h4> <p>price of product12</p> </div>
+
+        </div>
+    </div>
+</div>
+<!-----------------------------------------------offer--------------------------------------
+----------->
+<div class="offer">
+    <div class="smallcontainer">
+        <div class="row">
+            <div class="col-2">
+                <img src="/images/kpr1.png" class="offer-img">
+            </div>
+            <div class="col-2">
+                <p>Exclusivily available at VocalForLocal </p>
+                <h1>Warli Painting Vase </h1>
+                <small>A very charming and ethnic handicraft to embellish your home or office
+                    space. Simplicity and elegance both go hand in hand with this extremely designer and
+                    elegant, looking piece of home decoration item.</small>
+            </div>
+            <a href="" class="btn">Buy Now &#8594; </a>
+        </div>
+    </div>
+</div>
+<!-------------------footer-->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col1">
+                <h3>Download our app</h3>
+                <p>Download App for Android and IOS mobile phone</p>
+                <div class="app-logo">
+                    <a href=""><img src="/images/play-store.png" ></a>
+                    <a href=""><img src="/images/app-store.png" ></a>
+                </div>
+            </div>
+            <div class="footer-col2">
+                <img src="/images/logo3-removebg-preview.png" width="200px">
+                <p>Our purpose is to bring out the fine<br> qualities of the local creators of India</p>
+            </div>
+            <div class="footer-col3">
+                <h3>Useful links</h3>
+                <ul>
+                    <li><a href="">Coupons</a></li>
+                    <li><a href="">Blog Post</a></li>
+                    <li><a href="">Return Policy</a></li>
+                    <li><a href="">Join Affiliate</a></li>
+                </ul>
+
+            </div>
+            <div class="footer-col4">
+                <h3>Follow us</h3>
+                <ul>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Twitter</a></li>
+                    <li><a href="">Youtube</a></li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2020-Tanmay Hirwani 19BIT0273 </p>
+    </div>
+</div>
+</div>
+</div>
+<script>
+    var Menuitems=document.getElementById("Menuitems")
+    Menuitems.style.maxHeight="0px"
+    function menutoggle(){
+        if( Menuitems.style.maxHeight=="0px")
+        {
+            Menuitems.style.maxHeight="200px"
+        }
+        else{
+            Menuitems.style.maxHeight="0px"
+        }
+    }
+</script>
+</body>
+</html>
